@@ -41,7 +41,7 @@ Enemy.prototype.render = function() {
 var Player = function(x, y) {
     this.x = x;
     this.y = y;
-    this.player = 'images/char-boy.png';
+    this.player = 'images/char-cat-girl.png';
 }
 
 Player.prototype.update = function(dt) {
