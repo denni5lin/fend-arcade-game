@@ -20,7 +20,7 @@ Enemy.prototype.update = function(dt) {
 
     if (this.x > 510) {
         this.x = -50;
-        this.speed = 100 + Math.floor(Math.random() * 222);
+        this.speed = 115 + Math.floor(Math.random() * 222);
     }
     // Set Collision
     if (player.x < this.x + 80 && player.x + 80 > this.x && 
@@ -67,19 +67,23 @@ Player.prototype.handleInput = function(keyPress) {
     }
     if (this.y < 0) {
         setTimeout(function() {
+            alert('You win!');
+        }, 300)
+        setTimeout(function() {
             player.x = 202;
-            player.y = 405;
-        }, 600);
+            player.y = 405;         
+        }, 500);
+
     }
 }
 // Now instantiate your objects.
 // Place all enemy objects in an array called allEnemies
 // Place the player object in a variable called player
 var allEnemies = [];
-var enemyLocation = [63, 147, 230];
+var enemyLocation = [63, 147, 230, 313];
 
 enemyLocation.forEach(function(locationY) {
-    enemy = new Enemy(0, locationY, 200);
+    enemy = new Enemy(0, locationY, 115 + Math.floor(Math.random() * 222));
     allEnemies.push(enemy);
 });
 

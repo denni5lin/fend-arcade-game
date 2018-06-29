@@ -43,8 +43,8 @@ var Engine = (function(global) {
                 'images/water-block.png',  
                 'images/stone-block.png',  
                 'images/stone-block.png',   
+                'images/stone-block.png',
                 'images/stone-block.png',   
-                'images/grass-block.png',  
                 'images/grass-block.png'    
             ],
             numRows = 6,
