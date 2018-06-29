@@ -82,8 +82,8 @@ Player.prototype.handleInput = function(keyPress) {
 var allEnemies = [];
 var enemyLocation = [63, 147, 230, 313];
 
-enemyLocation.forEach(function(locationY) {
-    enemy = new Enemy(0, locationY, 115 + Math.floor(Math.random() * 222));
+enemyLocation.forEach(function(y) {
+    enemy = new Enemy(0, y, 115 + Math.floor(Math.random() * 222));
     allEnemies.push(enemy);
 });
 

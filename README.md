@@ -20,3 +20,5 @@ Move the character around the screen by using the arrow keys on your keyboard. T
 ### Resources
 
 * [Udacity Project](https://github.com/udacity/frontend-nanodegree-arcade-game)
+* [Youtube Udacity Tutorial](https://www.youtube.com/playlist?list=PLdUdGSe4kmWbEQDQ2g8A0zPx1EM9DJZpp)
+* [Youtube Tutorial](https://www.youtube.com/watch?v=7PHhRrjgTDA)
