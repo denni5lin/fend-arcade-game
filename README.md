@@ -17,7 +17,7 @@ This is Udacity's Arcade Clone Project that demonstrates a Student's mastery of 
 
 ### Instructions
 
-Clone or download this repository and open index.html in browser. Or you can play the game [**here**](https://denni5lin.github.io/fend-arcade-game/).
+Clone or download this repository and open `index.html` in browser. Or you can play the game [**here**](https://denni5lin.github.io/fend-arcade-game/).
 
 ### How to play
 
