@@ -17,7 +17,6 @@ Enemy.prototype.update = function(dt) {
     // which will ensure the game runs at the same speed for
     // all computers.
     this.x += this.speed * dt;
-
     if (this.x > 510) {
         this.x = -50;
         this.speed = 115 + Math.floor(Math.random() * 222);
@@ -36,21 +35,17 @@ Enemy.prototype.render = function() {
 };
 
 // Now write your own player class
-// This class requires an update(), render() and
+// This class requires a render() and
 // a handleInput() method.
 var Player = function(x, y) {
     this.x = x;
     this.y = y;
     this.player = 'images/char-cat-girl.png';
-}
-
-Player.prototype.update = function(dt) {
-
-}
+};
 
 Player.prototype.render = function() {
     ctx.drawImage(Resources.get(this.player), this.x, this.y);
-}
+};
 
 Player.prototype.handleInput = function(keyPress) {
     if (keyPress == 'left' && this.x > 0) {
@@ -65,6 +60,7 @@ Player.prototype.handleInput = function(keyPress) {
     if (keyPress == 'down' && this.y < 405) {
         this.y += 83;
     }
+    // When player crossed
     if (this.y < 0) {
         setTimeout(function() {
             alert('You win!');
@@ -75,22 +71,22 @@ Player.prototype.handleInput = function(keyPress) {
         }, 500);
 
     }
-}
-// Now instantiate your objects.
+};
+
 // Place all enemy objects in an array called allEnemies
-// Place the player object in a variable called player
 var allEnemies = [];
 var enemyLocation = [63, 147, 230, 313];
-
+//  Position enemies and start at random speed
 enemyLocation.forEach(function(y) {
     enemy = new Enemy(0, y, 115 + Math.floor(Math.random() * 222));
     allEnemies.push(enemy);
 });
 
+// Place the player object in a variable called player
 var player = new Player(202, 405);
 
-// This listens for key presses and sends the keys to your
-// Player.handleInput() method. You don't need to modify this.
+// This listens for key presses and sends the keys to 
+// Player.handleInput() method. 
 document.addEventListener('keyup', function(e) {
     var allowedKeys = {
         37: 'left',
