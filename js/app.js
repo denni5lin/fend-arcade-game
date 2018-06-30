@@ -43,6 +43,9 @@ var Player = function(x, y) {
     this.player = 'images/char-cat-girl.png';
 };
 
+Player.prototype.update = function() {
+};
+
 Player.prototype.render = function() {
     ctx.drawImage(Resources.get(this.player), this.x, this.y);
 };
